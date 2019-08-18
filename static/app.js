@@ -21,6 +21,8 @@ function buildMetadata(sample) {
     // BONUS: Build the Gauge Chart
     // adding the gauge parameter
     // buildGauge(data.WFREQ);
+
+
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
@@ -36,7 +38,7 @@ function buildCharts(sample) {
         color: data.otu_ids,
         size: data.sample_values,
     
-        colorscale: "Earth"
+        colorscale: "Rdbu"
       }
     };
     var trace1 = [trace1];

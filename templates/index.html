@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-    .jumbotron{background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/r3vThzKIxixyumkql/videoblocks-viruses-under-microscopehuman-immune-system-virus-moving-across-screen-bacteria-virus-or-germs-microorganism-cells-under-microscope-3d-render-microbe-seamless-loop_b_lnf8617_thumbnail-full01.png");}
+        .jumbotron {
+            background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/r3vThzKIxixyumkql/videoblocks-viruses-under-microscopehuman-immune-system-virus-moving-across-screen-bacteria-virus-or-germs-microorganism-cells-under-microscope-3d-render-microbe-seamless-loop_b_lnf8617_thumbnail-full01.png");
+        }
     </style>
 </head>
 
@@ -26,17 +28,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="card col-md-2">
-                <div class="card-title well">
-                    <h5>SELECT Sample:</h5>
-                    <select id="selDataset" onchange="optionChanged(this.value)">
-                    </select>
-                </div>
-                <div class="card-text panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Sample MetaData</h3>
+            <div col-md-2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Select Sample:</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value)">
+                        </select>
                     </div>
-                    <div id="sample-metadata" class="panel-body"></div>
+                </div>
+                <br>
+                <div class="card">
+                        <div class="card-title" style="background:#337ab7; border-color: #337ab7">
+                            <h5 class="text-white text-center">Sample MetaData</h5>
+                        </div>
+                        <div class="card-body" style="font-family: 'Courier New', Courier, monospace" id="sample-metadata"></div>
                 </div>
             </div>
             <div class="col-md-5">
@@ -54,7 +59,7 @@
     </div>
     <!-- Adding plot js -->
     <script src="{{ url_for('static', filename='app.js') }}"></script>
-    
+
     <!-- Adding bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -66,7 +71,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
+
 </body>
 
 </html>
